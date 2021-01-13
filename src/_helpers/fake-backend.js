@@ -1,7 +1,10 @@
-//import users from '../../usersdb'
+import usersdb from '../../usersdb'
 // array in local storage for registered users
-let users = JSON.parse(localStorage.getItem('users')) || [];
-    
+
+//localStorage.setItem('users', usersdb)
+
+//let users = JSON.parse(localStorage.getItem('users')) || [];
+  let users = usersdb();  
 export function configureFakeBackend() {
     let realFetch = window.fetch;
     window.fetch = function (url, opts) {
